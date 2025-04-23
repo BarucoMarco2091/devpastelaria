@@ -1,0 +1,75 @@
+@import '../header/responsivity.scss';
+@import '../../variables.scss';
+
+@keyframes scale {
+    from {
+        transform: scale(1) translateY(0);
+    }
+    to {
+        transform: scale(1.1) translateY(-8px);
+    }
+}
+
+header {
+    background-image: url('/bg.webp');
+    background-repeat: no-repeat;
+    height: 50dvh;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        margin: 1dvh 1dvh;
+
+        .nav-icons {
+            display: flex;
+            flex-direction: row;
+
+            i {
+                margin-right: 2dvh;
+                transition: color 1s;
+            }
+
+            i:hover {
+                color: $red;
+                animation: scale 1s infinite alternate;
+            }
+        }
+
+        .logo {
+            i, span {
+                font-size: 1.7rem;
+            }
+        }
+
+        .nav-btn {
+            button {
+                background-color: transparent;
+                border-radius: 2dvh;
+                border: 1px solid $white;
+                color: $white;
+                height: 5dvh;
+                width: 20dvh;
+                transition: border 1s;
+            }
+
+            button:hover {
+                border: 2px solid $red;
+            }
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        .hour-open {
+            background-color: $green;
+            width: 40dvh;
+            height: 5dvh;
+            color: $white;
+        }
+    }
+}

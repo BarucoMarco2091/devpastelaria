@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+@media (width >= 1024px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin: auto;
+        padding: 5dvh 5dvh;
+    }
+}

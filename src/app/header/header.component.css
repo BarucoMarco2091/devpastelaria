@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@media (width >= 1024px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: auto;
+    padding: 5dvh 5dvh;
+  }
+}
+@keyframes scale {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.1) translateY(-8px);
+  }
+}
+header {
+  background-image: url("/bg.webp");
+  background-repeat: no-repeat;
+  height: 50dvh;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  margin: 1dvh 1dvh;
+}
+header nav .nav-icons {
+  display: flex;
+  flex-direction: row;
+}
+header nav .nav-icons i {
+  margin-right: 2dvh;
+  transition: color 1s;
+}
+header nav .nav-icons i:hover {
+  color: #E53935;
+  animation: scale 1s infinite alternate;
+}
+header nav .logo i, header nav .logo span {
+  font-size: 1.7rem;
+}
+header nav .nav-btn button {
+  background-color: transparent;
+  border-radius: 2dvh;
+  border: 1px solid #FFF8E1;
+  color: #FFF8E1;
+  height: 5dvh;
+  width: 20dvh;
+  transition: border 1s;
+}
+header nav .nav-btn button:hover {
+  border: 2px solid #E53935;
+}
+header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+header div .hour-open {
+  background-color: #4CAF50;
+  width: 40dvh;
+  height: 5dvh;
+  color: #FFF8E1;
+}/*# sourceMappingURL=header.component.css.map */
