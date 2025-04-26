@@ -1,0 +1,10 @@
+@import '../../../variables.scss';
+@import '../../pages/login/responsivity.scss';
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50dvh;
+}
