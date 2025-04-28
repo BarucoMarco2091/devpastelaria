@@ -17,7 +17,7 @@ header {
 
     nav {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 1dvh 1dvh;
 
         .nav-icons {
@@ -43,19 +43,10 @@ header {
 
         .nav-btn {
             button {
-                background-color: transparent;
-                border-radius: 2dvh;
-                border: 1px solid $white;
-                color: $white;
-                height: 5dvh;
-                width: 20dvh;
-                transition: border 1s;
-            }
-
-            button:hover {
-                border: 2px solid $red;
+                visibility: hidden;
             }
         }
+
     }
 
     div {

@@ -15,3 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 export class AppComponent {
   title = 'devpastelaria';
 }
+function ngOnInit() {
+  throw new Error('Function not implemented.');
+}
+
