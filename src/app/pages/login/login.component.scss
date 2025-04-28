@@ -7,4 +7,31 @@
     justify-content: center;
     align-items: center;
     height: 50dvh;
+
+    input {
+        margin-top: 3dvh;
+        border: 1px solid $white;
+        border-radius: 2dvh;
+        height: 5dvh;
+        width: 25dvh;
+    }
+
+    input::placeholder {
+        text-align: center;
+    }
+
+    .login {
+        margin-top: 2dvh;
+        border: none;
+        border-radius: 2dvh;
+        width: 15dvh;
+        height: 5dvh;
+        background-color: $brown;
+        color: $white;
+        transition: background-color 1s;
+    }
+
+    .login:hover {
+        background-color: $yellow;
+    }
 }

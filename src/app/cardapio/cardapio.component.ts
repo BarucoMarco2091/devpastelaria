@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CardapioService } from '../services/cardapio.service';
 
 interface CardapioItem {
   name: string;
@@ -17,19 +18,12 @@ interface CardapioItem {
 })
 export class CardapioComponent {
 
-  menuItems = [
-    { name: 'Pastel de Bacalhau', description: 'Bacalhau refogado no alho, cebola e pimenta dedo-de-moça. Massa artesanal, fina e crocante, dourada no ponto perfeito.', price: 50.00, image: '/pastelbacalhau.webp' },
-    { name: 'Pastel de Camarão', description: 'Camarões frescos refogados no alho, limão e pimenta dedo-de-moça, com catupiry. Massa artesanal, fina e crocante, dourada no ponto perfeito.', price: 40.00, image: '/pastelcamarao.webp'},
-    { name: 'Pastel de Carne', description: 'Patinho moído refogado no alho, cebola e pimenta dedo-de-moça. Massa artesanal, fina e crocante, dourada no ponto perfeito.', price: 30.00, image: '/pastelcarne.webp'},
-    { name: 'Pastel de Frango', description: 'Peito de frango desfiado refogado no alho, cebola e pimenta dedo-de-moça, com catupiry. Massa artesanal, fina e crocante, dourada no ponto perfeito.', price: 25.00, image: '/pastelfrango.webp'},
-    { name: 'Pastel de Palmito', description: 'Palmito refogado no alho, cebola e pimenta dedo-de-moça. Massa artesanal, fina e crocante, dourada no ponto perfeito.', price: 25.00, image: '/pastelpalmito.webp'},
-    { name: 'Pastel de Queijo', description: 'Queijo mussarela. Massa artesanal, fina e crocante, dourada no ponto perfeito.', price: 20.00, image: '/pastelqueijo.webp'},
-  ];
-
   cart: CardapioItem[] = [];
   isModalOpen = false;
   address = '';
   showAddressWarning = false;
+
+  constructor(public cardapioService: CardapioService) {}
 
   get total(): number {
     return this.cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
