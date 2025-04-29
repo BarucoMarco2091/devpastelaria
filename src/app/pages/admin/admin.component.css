@@ -9,13 +9,14 @@
   }
   .grid .card {
     display: flex;
-    height: 40dvh;
+    flex-direction: row !important;
+    height: 40dvh !important;
   }
   .grid .card .card-img img {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
-    height: 40dvh;
+    height: 40dvh !important;
   }
 }
 .admin-container {
@@ -23,6 +24,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1240px;
+  margin: auto;
 }
 .admin-container .form-container {
   display: flex;
